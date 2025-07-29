@@ -33,7 +33,7 @@ st.markdown("""
 | Area Hijau              | Layer `HUTANLAHANTINGGI_AR_25K`, `HUTANLAHANRENDAH_AR_25K`,`HERBADANRUMPUT_AR_25K`,`HUTANTANAMAN_AR_25K`|
 | Grid Spasial            | Grid 1 km × 1 km yang dibentuk dari bounding box Kabupaten |
 | Fitur/Parameter         | Kepadatan bangunan (m²/km²), kepadatan jalan (km/km²), persentase hijau (%) |
-| Klasifikasi             |  |
+| Klasifikasi             | `\[\text{Emisi Skor} = (\alpha \times \text{Kepadatan Jalan}) + (\beta \times \text{Kepadatan Bangunan}) - (\gamma \times \text{Persentase Area Hijau})\]`|
 """)
 
 st.markdown("---")
