@@ -106,8 +106,8 @@ with st.expander("🖼️ Data Collectiing", expanded=False):
     plt.show()
     """, language="python")
 
-# === Data Understanding ===
-with st.expander("🖼️ Data Understanding", expanded=False): 
+# === Data Labeling ===
+with st.expander("🖼️ Data Labeling", expanded=False): 
     st.code("""
     minx, miny, maxx, maxy = banyumas_kab.total_bounds
     grid_size = 1000
@@ -277,16 +277,6 @@ with st.expander("🖼️ Data Spliting dan Oversampling", expanded=False):
 
     classes = le.classes_  # ['normal', 'parah', 'sedang']
     class_indices = list(range(len(classes)))  # [0, 1, 2]
-    
-    df_before = pd.DataFrame(X_train, columns=fitur)
-    df_before["kategori_emisi"] = y_train.values
-    df_before["status"] = "Sebelum Oversampling"
-
-    df_after = pd.DataFrame(X_resampled, columns=fitur)
-    df_after["kategori_emisi"] = y_resampled.values
-    df_after["status"] = "Setelah Oversampling"
-
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
 
     # Sebelum normalisasi
     sns.countplot(data=df_before, x="kategori_emisi", palette="Blues", ax=axes[0])
@@ -331,6 +321,11 @@ with st.expander("🖼️ Training Model", expanded=False):
     accuracy = accuracy_score(y_test_encoded, y_pred)
     print(f"\n✅ Akurasi Prediksi Keseluruhan: {accuracy:.4f} ({accuracy*100:.2f}%)\n")
 
+    """, language="python")
+    
+# === Evaluasi Model ===
+with st.expander("🖼️ Evaluasi Model", expanded=False): 
+    st.code("""
     # Classification Report
     print("📋 Classification Report:")
     print(classification_report(y_test_encoded, y_pred, target_names=classes))
@@ -383,25 +378,6 @@ with st.expander("🖼️ Visualisasi ROC", expanded=False):
         plt.ylabel("True Positive Rate")
         plt.title("ROC Curve per Kelas (One vs Rest)")
         plt.legend(loc="lower right")
-        plt.grid(True)
-        plt.tight_layout()
-        plt.show()
-    
-        parah_index = list(classes).index("parah")
-
-        # Probabilitas prediksi untuk kelas 'parah'
-        probs = y_score[:, parah_index]
-
-        mask_parah = (y_test_encoded == parah_index)
-        mask_non_parah = (y_test_encoded != parah_index)
-
-        sns.histplot(probs[mask_parah], color='red', label="parah (benar)", bins=20, kde=True)
-        sns.histplot(probs[mask_non_parah], color='gray', label="bukan parah", bins=20, kde=True)
-        plt.axvline(threshold, color='blue', linestyle='--', label=f"threshold = {threshold}")
-        plt.title("Distribusi Probabilitas Prediksi Kelas 'Parah'")
-        plt.xlabel("predict_proba untuk kelas 'parah'")
-        plt.ylabel("Jumlah")
-        plt.legend()
         plt.grid(True)
         plt.tight_layout()
         plt.show()
