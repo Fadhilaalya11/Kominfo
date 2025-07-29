@@ -30,10 +30,10 @@ st.markdown("""
 | Batas Administratif     | SHP GADM Kabupaten Banyumas (EPSG:32749) |
 | Jaringan Jalan          | Layer `JALAN_LN_25K` (RBI geodatabase) |
 | Bangunan                | Layer `PERUMAHAN_AR_25K`, `PERMUKIMAN_AR_25K` |
-| Area Hijau              | Layer `HUTANLAHANTINGGI_AR_25K', 'HUTANLAHANRENDAH_AR_25K`,'HERBADANRUMPUT_AR_25K`,`HUTANTANAMAN_AR_25K'|
+| Area Hijau              | Layer `HUTANLAHANTINGGI_AR_25K`, 'HUTANLAHANRENDAH_AR_25K`,`HERBADANRUMPUT_AR_25K`,`HUTANTANAMAN_AR_25K`|
 | Grid Spasial            | Grid 1 km × 1 km yang dibentuk dari bounding box Kabupaten |
 | Fitur/Parameter         | Kepadatan bangunan (m²/km²), kepadatan jalan (km/km²), persentase hijau (%) |
-| Klasifikasi             | Rule-based dengan threshold hijau ≥30%, jalan ≤5 km/km², bangunan ≤1000 m²/km² |
+| Klasifikasi             |  |
 """)
 
 st.markdown("---")
