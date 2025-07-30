@@ -337,11 +337,7 @@ with st.expander("🖼️ Evaluasi Model", expanded=False):
     plt.title("Confusion Matrix")
     plt.tight_layout()
     plt.show()
-    """, language="python")
 
-# === Visualisasi ROC ===
-with st.expander("🖼️ Visualisasi ROC", expanded=False): 
-    st.code("""
     threshold = 0.3
 
     print(f"\n Evaluasi Binary Manual + ROC Curve per Kelas (threshold = {threshold}):\n")
@@ -381,7 +377,13 @@ with st.expander("🖼️ Visualisasi ROC", expanded=False):
         plt.grid(True)
         plt.tight_layout()
         plt.show()
+        
+        """, language="python")
+
     
+    # === Rekap Prediksi ===
+with st.expander("🖼️ Rekap Prediksi", expanded=False): 
+    st.code("""
         # Gabung prediksi
         df_test["prediksi_kategori"] = y_pred
 
@@ -456,3 +458,22 @@ with st.expander("🖼️ Visualisasi ROC", expanded=False):
         df.to_csv("hasil_merge_SVM_labeled.csv", index=False)
         print(df.head())
     """, language="python")
+
+st.title("📦 Unduh Dataset dan Notebook")
+
+file_paths = {
+    "📄 Batas Kecamatan Banyumas (KML)": "files/batas_kecamatan_banyumas.kml",
+    "📄 Banyumas Only (KML)": "files/banyumas_only.kml",
+    "🗂️ Indonesia SHP Level 3 (ZIP)": "files/indonesiaSHPLevel3.zip",
+    "🗂️ RBI25K Banyumas GDB (ZIP)": "files/2022_RBI25K_KAB_BANYUMAS_KUGI50_20221231.zip",
+    "📘 Notebook Kominfo SVM (IPYNB)": "files/Project_Kominfo_SVM.ipynb"
+}
+
+for label, path in file_paths.items():
+    with open(path, "rb") as f:
+        st.download_button(
+            label=f"⬇️ {label}",
+            data=f,
+            file_name=path.split("/")[-1],
+            mime="application/octet-stream"
+        )
