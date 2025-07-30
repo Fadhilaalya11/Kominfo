@@ -465,7 +465,7 @@ file_paths = {
     "📄 Batas Kecamatan Banyumas (KML)": "files/batas_kecamatan_banyumas.kml",
     "📄 Banyumas Only (KML)": "files/banyumas_only.kml",
     "🗂️ Indonesia SHP Level 3 (ZIP)": "files/indonesiaSHPLevel3.zip",
-    "🗂️ RBI25K Banyumas GDB (ZIP)": "files/2022_RBI25K_KAB_BANYUMAS_KUGI50_20221231.zip",
+    "🗂️ RBI25K Banyumas GDB (ZIP)": "files/2022_RBI25K_KAB_BANYUMAS_KUGI50_20221231.gdb.zip",
     "📘 Notebook Kominfo SVM (IPYNB)": "files/Project_Kominfo_SVM.ipynb"
 }
 
