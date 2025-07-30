@@ -7,7 +7,7 @@ st.markdown("""
 Kabupaten Banyumas, bagian dari **Provinsi Jawa Tengah**, berada di tengah dinamika pembangunan kota dan lingkungan hijau.
 Menurut data inventarisasi nasional GRK sektor energi by Kementerian LHK:
 - Provinsi **Jawa Tengah menghasilkan sekitar 183,76 gigagram (Gg CO₂e)** pada tahun 2022 — termasuk dari energi, transportasi, dan industri :contentReference[oaicite:4]{index=4}.
-- Secara nasional, emisi GRK Indonesia meningkat dari **864,85 Mt CO₂e tahun 2013** menjadi **~1.200 Mt CO₂e pada tahun 2023** :contentReference[oaicite:5]{index=5}.
+- Secara nasional, emisi GRK Indonesia meningkat dari **864,85 Mt CO₂e tahun 2013** menjadi **~1.200 Mt CO₂e pada tahun 2023**.
 
 📌 Potensi emisi di Banyumas terkait intensifikasi infrastruktur dan penggunaan lahan menjadi penting untuk dipetakan dan dimitigasi.
 """)
