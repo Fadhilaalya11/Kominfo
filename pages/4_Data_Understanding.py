@@ -21,6 +21,6 @@ with st.expander("🖼️ Grafik Distribusi Kategori", expanded=False):
 # === Grafik Distribusi Train/Test Split ===
 with st.expander("🖼️ Grafik Distribusi Data Train/Test", expanded=False):
     with st.columns(1)[0]:
-        st.image("distribusi data (training 783, testing 213).png", caption="Distribusi Data Training vs Testing", use_column_width=True)
+        st.image("distribusi_data.png", caption="Distribusi Data Training vs Testing", use_column_width=True)
 
 

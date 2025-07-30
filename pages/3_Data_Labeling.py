@@ -14,7 +14,7 @@ data = {
     "Kategori Emisi Karbon": ["Normal (Rendah)", "Sedang", "Parah (Tinggi)"],
     "Persentase Area Hijau": [">= 30%", "15% – 30%", "< 15%"],
     "Kepadatan Jalan (km/km²)": ["≤ 5 km/km²", "5 – 10 km/km²", "> 10 km/km²"],
-    "Kepadatan Bangunan (bangunan/km²)": ["≤ 1000", "1000 – 3000", "> 3000"],
+    "Kepadatan Bangunan (m²/km²)": ["≤ 1000", "1000 – 3000", "> 3000"],
     "Keterangan": [
         "Kota berkelanjutan, banyak RTH, lalu lintas rendah",
         "Kota berkembang, RTH mulai berkurang, lalu lintas padat",
