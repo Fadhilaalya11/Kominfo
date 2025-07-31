@@ -3,13 +3,22 @@ import pandas as pd
 
 st.header("🔎 Latar Belakang & Kondisi Emisi Terkini")
 
+# Poin 1
 st.markdown("""
-Kabupaten Banyumas, bagian dari **Provinsi Jawa Tengah**, berada di tengah dinamika pembangunan kota dan lingkungan hijau.
-Menurut data inventarisasi nasional GRK sektor energi by Kementerian LHK:
-- Provinsi **Jawa Tengah menghasilkan sekitar 183,76 gigagram (Gg CO₂e)** pada tahun 2022 — termasuk dari energi, transportasi, dan industri :contentReference[oaicite:4]{index=4}.
-- Secara nasional, emisi GRK Indonesia meningkat dari **864,85 Mt CO₂e tahun 2013** menjadi **~1.200 Mt CO₂e pada tahun 2023**.
+### 1. Tahun 2023, emisi karbon dunia mencapai hampir 37 miliar ton dan terus meningkat setiap tahun
+""")
 
-📌 Potensi emisi di Banyumas terkait intensifikasi infrastruktur dan penggunaan lahan menjadi penting untuk dipetakan dan dimitigasi.
+# Poin 2 dengan grafik
+st.markdown("""
+### 2. Di Indonesia, emisi karbon meningkat drastis dalam 10 tahun terakhir, terutama sejak 2012.
+""")
+
+# Gambar grafik (ganti path jika perlu)
+st.image("Grafik_Emisi.png", caption="Grafik Kenaikan Emisi Karbon di Indonesia", use_column_width=True)
+
+# Poin 3
+st.markdown("""
+### 3. Kabupaten Banyumas juga menghadapi tantangan besar, dimana belum ada sistem yang bisa memantau kadar emisi karbon.
 """)
 
 st.markdown("---")
